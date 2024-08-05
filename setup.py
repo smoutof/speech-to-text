@@ -1,4 +1,15 @@
-import time
+import time, os
+
+def create_dir(dir):
+    try:
+        os.makedirs(dir, exist_ok=False)
+        print(f"Directory '{dir}' created successfully.")
+    except Exception as e:
+        print(f"Error creating directory '{dir}': {e}")
+
+def create_folders():
+    create_dir("input")
+    create_dir("output")
 
 def create_config():
     config_content = """
@@ -32,7 +43,9 @@ TO_EMAIL = ""                   # your personal email account
         file.write(config_content)
     print("A config.py file has been created with the default configuration.")
 
-input("You are about to create the config.py file with default settings. Edit the file to your liking. [enter to continue...]")
-create_config()
-print("config.py created.")
-time.sleep(5)
+if __name__ == "__main__":
+    input("You are about to create the config.py file with default settings. Edit the file to your liking. [enter to continue...]")
+    create_config()
+    create_folders()
+    print("config.py created.")
+    input("[enter to close]")
