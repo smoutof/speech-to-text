@@ -15,7 +15,7 @@ def create_config():
     config_content = """
 # This is the default config file. Edit this to your liking.
     # NOTE: settings are case sensitive, any mistakes in spelling will cause errors.
-    # Refer to the github for more details. [https://github.com/smoutof/]
+    # Refer to the github for more details. [https://github.com/smoutof/speech-to-text]
 
 
 # Transcription settings
@@ -25,7 +25,7 @@ language = "en"                 # language of videos [en/fi/se/etc...]
 model = "small"                 # select a model [tiny/small/medium/large]
 compute_type = "float32"        # select a compute type [int8/float16/float32] (if the default doesn't work, try the other ones)
 device = "cpu"                  # select hardware to use [cpu/cuda]
-                                    # To use an nvidia gpu, refer to the guide on the github. [https://github.com/smoutof/]
+                                    # To use an nvidia gpu, refer to the guide on the github. [https://github.com/smoutof/speech-to-text]
 
 
 
