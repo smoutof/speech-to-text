@@ -81,11 +81,11 @@ def generate_doc_file(segments, input_video, input_video_name, output_dir):
     
     doc = Document()
     doc.add_heading(f"{input_video_name}", 0)
-    doc.add_heading(f"Automaattisesti luotu word tiedosto litteraatiosta.", level=1)
-    par = doc.add_paragraph("Videon aika on ")
-    par.add_run("lihavoitu").bold = True
-    par.add_run(" ja aikakoodi ")
-    par.add_run("kursivoitu").italic = True
+    doc.add_heading(f"Automatically created Docx file from video speech.", level=1)
+    par = doc.add_paragraph("The time of the video is ")
+    par.add_run("bolded").bold = True
+    par.add_run(" and timecode is in ")
+    par.add_run("italics").italic = True
     par.add_run(".")
 
     start_timecode, fps = extract_time_code_and_framerate(input_video)
@@ -113,10 +113,10 @@ def generate_doc_file_no_timecode(segments, input_video_name, output_dir):
     
     doc = Document()
     doc.add_heading(f"{input_video_name}", 0)
-    doc.add_heading(f"Automaattisesti luotu word tiedosto litteraatiosta.", level=1)
-    par = doc.add_paragraph("Videon aika on ")
-    par.add_run("lihavoitu").bold = True
-    par.add_run(", mutta aikakoodi ei ollut saatavilla.")
+    doc.add_heading(f"Automatically created Docx file from video speech.", level=1)
+    par = doc.add_paragraph("The time of the video is ")
+    par.add_run("bolded").bold = True
+    par.add_run(", but the timecode wasn't available.")
 
     text = doc.add_paragraph("")
     for index, segment in enumerate(segments):
