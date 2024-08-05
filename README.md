@@ -1,6 +1,8 @@
 # speech-to-text
  Quick program used for speech to text using [faster-whisper](https://github.com/SYSTRAN/faster-whisper). I won't be updating this, but if you want to try it follow the guide below.
 
+ Input a video and the program outputs a subtitle track, a file with timecode (if available) and a doc file.
+
 # Guide
 
 > Note: I have only tested this program on Windows 10. I am unsure about support for other operating systems. I've also only tested this on Python 3.12
