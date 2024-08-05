@@ -19,6 +19,19 @@ Once everything is installed, it is recommended to create a Python environment. 
 Now activate the environment by running the PowerShell script in the terminal:
 
     .\env\Scripts\Activate.ps1
+    
+
+<details>
+<summary>Can't run PowerShell scripts? (expand)</summary>
+<br>
+
+ 1. Open PowerShell as administrator
+ 2. type `Set-ExecutionPolicy Unrestricted`
+ 3. Press **A**
+ 4. You can now close the admin window and run the script again.
+
+</details>
+
 Once in the environment, install the required Python packages.
 
     pip install -r requirements.txt
